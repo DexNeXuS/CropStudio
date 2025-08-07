@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropStudio - Professional Image Processing Software</title>
+    <meta name="description" content="Professional image processing software for photographers, designers, and content creators. Batch process images with smart cropping, face detection, and advanced features.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.svg" alt="CropStudio" class="logo">
+                <span class="logo-text">CropStudio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Professional Image Processing
+                    <span class="gradient-text">Made Simple</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your workflow with intelligent batch processing, smart cropping, and advanced features designed for photographers, designers, and content creators.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Now
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-bolt"></i>
+                        <span>Lightning Fast</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Professional Quality</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-magic"></i>
+                        <span>AI-Powered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="assets/MAIN.png" alt="CropStudio Main Interface" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Main Interface</h4>
+                                <p>Clean, professional design with intuitive controls</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Main Interface.png" alt="CropStudio Interface" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Advanced Interface</h4>
+                                <p>Comprehensive tools for professional workflows</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Preview System.png" alt="Preview System" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Preview System</h4>
+                                <p>Real-time preview with crop boundaries</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Batch Processing - Basic.png" alt="Batch Processing Basic" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Batch Processing</h4>
+                                <p>Configure settings for multiple images</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Batch Processing - Size Selection.png" alt="Size Selection" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Size Selection</h4>
+                                <p>Choose from multiple aspect ratios</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Batch Processing - File Naming.png" alt="File Naming" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>File Naming</h4>
+                                <p>Custom templates for organized output</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/Batch Processing Templates.png" alt="Batch Templates" class="hero-screenshot">
+                            <div class="carousel-overlay">
+                                <h4>Processing Templates</h4>
+                                <p>Save and reuse your configurations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" onclick="changeHeroSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentHeroSlide(1)"></span>
+                            <span class="dot" onclick="currentHeroSlide(2)"></span>
+                            <span class="dot" onclick="currentHeroSlide(3)"></span>
+                            <span class="dot" onclick="currentHeroSlide(4)"></span>
+                            <span class="dot" onclick="currentHeroSlide(5)"></span>
+                            <span class="dot" onclick="currentHeroSlide(6)"></span>
+                            <span class="dot" onclick="currentHeroSlide(7)"></span>
+                        </div>
+                        <button class="carousel-btn next" onclick="changeHeroSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need for professional image processing</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Batch Processing</h3>
+                    <p>Process hundreds of images simultaneously with intelligent threading and memory optimization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-crop-alt"></i>
+                    </div>
+                    <h3>Smart Cropping</h3>
+                    <p>AI-powered face detection ensures important subjects stay in frame during cropping.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>Aspect Ratio Management</h3>
+                    <p>Support for 50+ predefined ratios plus custom ratios for any platform requirement.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Smart Organization</h3>
+                    <p>Template-based naming and flexible folder organization for professional workflows.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Real-time Preview</h3>
+                    <p>See exactly how your images will look before processing with live preview.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Watermarking</h3>
+                    <p>Add professional watermarks with precise positioning and opacity control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="section-subtitle">Professional interface designed for efficiency</p>
+            </div>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="assets/Main Interface.png" alt="Main Interface" class="screenshot">
+                    <div class="screenshot-overlay">
+                        <h4>Main Interface</h4>
+                        <p>Clean, professional design with intuitive controls</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="assets/Batch Processing - Basic.png" alt="Batch Processing" class="screenshot">
+                    <div class="screenshot-overlay">
+                        <h4>Batch Processing</h4>
+                        <p>Configure settings for multiple images</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="assets/Preview System.png" alt="Preview System" class="screenshot">
+                    <div class="screenshot-overlay">
+                        <h4>Preview System</h4>
+                        <p>Real-time preview with crop boundaries and effects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple Pricing</h2>
+                <p class="section-subtitle">Choose the plan that fits your needs</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Demo</h3>
+                        <div class="price">
+                            <span class="currency">Free</span>
+                            <span class="amount"></span>
+                            <span class="period">1 Week Trial</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Single image processing</li>
+                        <li><i class="fas fa-check"></i> Basic aspect ratios</li>
+                        <li><i class="fas fa-check"></i> Standard cropping modes</li>
+                        <li><i class="fas fa-check"></i> Limited batch processing</li>
+                        <li><i class="fas fa-times"></i> No face detection</li>
+                        <li><i class="fas fa-times"></i> No watermarking</li>
+                    </ul>
+                    <a href="#download" class="btn btn-outline">Try Demo</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">£</span>
+                            <span class="amount">40</span>
+                            <span class="period">One-time</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited images</li>
+                        <li><i class="fas fa-check"></i> All aspect ratios</li>
+                        <li><i class="fas fa-check"></i> Advanced cropping modes</li>
+                        <li><i class="fas fa-check"></i> AI face detection</li>
+                        <li><i class="fas fa-check"></i> Professional watermarking</li>
+                        <li><i class="fas fa-check"></i> Batch processing</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Lifetime updates</li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary">Get Professional</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>Ready to Transform Your Workflow?</h2>
+                <p>Download CropStudio today and experience professional image processing like never before.</p>
+                
+                <div class="download-options">
+                    <div class="download-option">
+                        <i class="fab fa-windows"></i>
+                        <h4>Windows</h4>
+                        <p>Windows 10/11 (64-bit)</p>
+                        <a href="#" class="btn btn-primary">Download for Windows</a>
+                    </div>
+                    
+                    <div class="download-option disabled">
+                        <i class="fab fa-apple"></i>
+                        <h4>macOS</h4>
+                        <p>Coming Soon</p>
+                        <span class="coming-soon">Will develop if demanded</span>
+                    </div>
+                    
+                    <div class="download-option disabled">
+                        <i class="fab fa-linux"></i>
+                        <h4>Linux</h4>
+                        <p>Coming Soon</p>
+                        <span class="coming-soon">Will develop if demanded</span>
+                    </div>
+                </div>
+                
+                <div class="download-info">
+                    <p><i class="fas fa-info-circle"></i> Free 7-day trial. No credit card required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions? We're here to help.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>DexNeXuSDesigns@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>Monday - Friday, 9AM - 6PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Documentation</h4>
+                            <p>Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                                    <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="CropStudio" class="logo">
+                    <span class="logo-text">CropStudio</span>
+                </div>
+                <p>Professional image processing software for photographers, designers, and content creators.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CropStudio. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
