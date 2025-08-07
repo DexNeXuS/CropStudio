@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropStudio Documentation</title>
+    <meta name="description" content="Complete documentation for CropStudio - Professional image processing software">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="docs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/logo.svg" alt="CropStudio" class="logo">
+                <span class="logo-text">CropStudio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="docs-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#getting-started" class="nav-link">Getting Started</a></li>
+                    <li><a href="#installation" class="nav-link">Installation</a></li>
+                    <li><a href="#basic-usage" class="nav-link">Basic Usage</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#batch-processing" class="nav-link">Batch Processing</a></li>
+                    <li><a href="#face-detection" class="nav-link">Face Detection</a></li>
+                    <li><a href="#watermarking" class="nav-link">Watermarking</a></li>
+                    <li><a href="#advanced-options" class="nav-link">Advanced Options</a></li>
+                    <li><a href="#troubleshooting" class="nav-link">Troubleshooting</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Getting Started -->
+                <section id="getting-started" class="doc-section">
+                    <h1>Getting Started with CropStudio</h1>
+                    <p class="lead">Welcome to CropStudio! This guide will help you get up and running with professional image processing in minutes.</p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h4>Quick Start</h4>
+                            <p>Download, install, and start processing images in under 5 minutes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Installation -->
+                <section id="installation" class="doc-section">
+                    <h2>Installation</h2>
+                    
+                    <h3>System Requirements</h3>
+                    <div class="requirements-grid">
+                        <div class="requirement-card">
+                            <i class="fab fa-windows"></i>
+                            <h4>Windows</h4>
+                            <ul>
+                                <li>Windows 10/11 (64-bit)</li>
+                                <li>4GB RAM minimum</li>
+                                <li>2GB free disk space</li>
+                                <li>DirectX 11 compatible graphics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Download & Install</h3>
+                    <ol class="install-steps">
+                        <li>
+                            <strong>Download:</strong> Visit our <a href="../index.html#download">download page</a> and select your operating system
+                        </li>
+                        <li>
+                            <strong>Run Installer:</strong> Double-click the downloaded file and follow the installation wizard
+                        </li>
+                        <li>
+                            <strong>Launch:</strong> Start CropStudio from your applications menu or desktop shortcut
+                        </li>
+                        <li>
+                            <strong>Activate:</strong> Enter your license key or start the demo version
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Basic Usage -->
+                <section id="basic-usage" class="doc-section">
+                    <h2>Basic Usage</h2>
+                    
+                    <h3>Your First Image</h3>
+                    <div class="step-grid">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h4>Load Images</h4>
+                            <p>Click "Add Images" or drag and drop files into the application window.</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h4>Select Aspect Ratio</h4>
+                            <p>Choose from 50+ predefined ratios or create custom dimensions.</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h4>Choose Crop Mode</h4>
+                            <p>Select center crop, face detection, or manual positioning.</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h4>Process & Save</h4>
+                            <p>Click "Process Images" and choose your output folder.</p>
+                        </div>
+                    </div>
+
+                    <h3>Interface Overview</h3>
+                    <div class="interface-overview">
+                        <img src="../assets/Interface.png" alt="CropStudio Interface" class="interface-screenshot">
+                        <div class="interface-labels">
+                            <div class="label" style="top: 15%; left: 15%;">
+                                <span>Input Section</span>
+                            </div>
+                            <div class="label" style="top: 35%; left: 15%;">
+                                <span>Processing Settings</span>
+                            </div>
+                            <div class="label" style="top: 55%; left: 15%;">
+                                <span>Watermark Options</span>
+                            </div>
+                            <div class="label" style="top: 75%; left: 15%;">
+                                <span>Output Directory</span>
+                            </div>
+                            <div class="label" style="top: 85%; left: 15%;">
+                                <span>Process Button</span>
+                            </div>
+                            <div class="label" style="top: 20%; right: 20%;">
+                                <span>Preview Area</span>
+                            </div>
+                            <div class="label" style="top: 40%; left: 50%;">
+                                <span>Crop Settings</span>
+                            </div>
+                            <div class="label" style="bottom: 15%; right: 20%;">
+                                <span>Output Log</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section id="features" class="doc-section">
+                    <h2>Core Features</h2>
+                    
+                    <div class="feature-detail">
+                        <h3>Smart Cropping</h3>
+                        <p>CropStudio offers multiple cropping modes to suit your needs:</p>
+                        
+                        <div class="feature-modes">
+                            <div class="mode-card">
+                                <h4><i class="fas fa-crosshairs"></i> Center Crop</h4>
+                                <p>Crops from the center of the image, perfect for symmetrical subjects.</p>
+                            </div>
+                            
+                            <div class="mode-card">
+                                <h4><i class="fas fa-user"></i> Face Detection</h4>
+                                <p>Automatically detects and centers on faces in your images.</p>
+                            </div>
+                            
+                            <div class="mode-card">
+                                <h4><i class="fas fa-hand-pointer"></i> Manual Position</h4>
+                                <p>Drag to position the crop area exactly where you want it.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-detail">
+                        <h3>Aspect Ratio Management</h3>
+                        <p>Choose from popular social media ratios or create custom dimensions:</p>
+                        
+                        <div class="ratio-grid">
+                            <div class="ratio-item">
+                                <span class="ratio">1:1</span>
+                                <span class="ratio-name">Square (Instagram)</span>
+                            </div>
+                            <div class="ratio-item">
+                                <span class="ratio">16:9</span>
+                                <span class="ratio-name">Widescreen</span>
+                            </div>
+                            <div class="ratio-item">
+                                <span class="ratio">4:5</span>
+                                <span class="ratio-name">Portrait (Instagram)</span>
+                            </div>
+                            <div class="ratio-item">
+                                <span class="ratio">9:16</span>
+                                <span class="ratio-name">Story (Instagram)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Batch Processing -->
+                <section id="batch-processing" class="doc-section">
+                    <h2>Batch Processing</h2>
+                    
+                    <p>Process hundreds of images simultaneously with intelligent threading and memory optimization.</p>
+                    
+                    <h3>Batch Workflow</h3>
+                    <ol class="batch-steps">
+                        <li><strong>Select Images:</strong> Choose multiple files or entire folders</li>
+                        <li><strong>Apply Settings:</strong> Configure once, apply to all images</li>
+                        <li><strong>Preview:</strong> Review how each image will be processed</li>
+                        <li><strong>Process:</strong> Run batch processing with progress tracking</li>
+                        <li><strong>Organize:</strong> Automatically organize output with custom naming</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>Memory Management</h4>
+                            <p>For large batches, CropStudio automatically manages memory usage to prevent system slowdown.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Face Detection -->
+                <section id="face-detection" class="doc-section">
+                    <h2>AI Face Detection</h2>
+                    
+                    <p>Our advanced AI ensures faces stay perfectly centered during cropping operations.</p>
+                    
+                    <h3>How It Works</h3>
+                    <div class="ai-explanation">
+                        <div class="ai-step">
+                            <div class="ai-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>Detection</h4>
+                            <p>AI scans the image to identify faces and facial features</p>
+                        </div>
+                        
+                        <div class="ai-step">
+                            <div class="ai-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4>Positioning</h4>
+                            <p>Calculates the optimal crop position to keep faces centered</p>
+                        </div>
+                        
+                        <div class="ai-step">
+                            <div class="ai-icon">
+                                <i class="fas fa-crop-alt"></i>
+                            </div>
+                            <h4>Cropping</h4>
+                            <p>Applies the crop while maintaining face position and composition</p>
+                        </div>
+                    </div>
+
+                    <h3>Face Detection Tips</h3>
+                    <ul class="tips-list">
+                        <li>Works best with clear, well-lit faces</li>
+                        <li>Supports multiple faces in a single image</li>
+                        <li>Maintains natural composition and framing</li>
+                        <li>Can be combined with manual adjustments</li>
+                    </ul>
+                </section>
+
+                <!-- Watermarking -->
+                <section id="watermarking" class="doc-section">
+                    <h2>Professional Watermarking</h2>
+                    
+                    <p>Add professional watermarks with precise positioning and opacity control.</p>
+                    
+                    <h3>Watermark Options</h3>
+                    <div class="watermark-options">
+                        <div class="option-card">
+                            <h4>Text Watermarks</h4>
+                            <ul>
+                                <li>Custom text and fonts</li>
+                                <li>Color and opacity control</li>
+                                <li>Position presets (corners, center)</li>
+                                <li>Rotation and scaling</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Image Watermarks</h4>
+                            <ul>
+                                <li>Upload your logo or image</li>
+                                <li>Automatic sizing and positioning</li>
+                                <li>Transparency support</li>
+                                <li>Batch application</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Advanced Options -->
+                <section id="advanced-options" class="doc-section">
+                    <h2>Advanced Options</h2>
+                    
+                    <h3>Performance Settings</h3>
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <h4>Threading</h4>
+                            <p>Configure the number of processing threads for optimal performance on your system.</p>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <h4>Memory Optimization</h4>
+                            <p>Adjust memory usage for large batch processing operations.</p>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <h4>Quality Settings</h4>
+                            <p>Control output quality and file size for different use cases.</p>
+                        </div>
+                    </div>
+
+                    <h3>File Organization</h3>
+                    <p>Use template-based naming and flexible folder organization:</p>
+                    
+                    <div class="naming-examples">
+                        <div class="example">
+                            <h4>Template Examples</h4>
+                            <code>{original_name}_{ratio}_{mode}</code>
+                            <p>Result: photo_1_16x9_face.jpg</p>
+                        </div>
+                        
+                        <div class="example">
+                            <h4>Date Formatting</h4>
+                            <code>{date}_{original_name}</code>
+                            <p>Result: 2024-01-15_photo.jpg</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section id="troubleshooting" class="doc-section">
+                    <h2>Troubleshooting</h2>
+                    
+                    <div class="troubleshooting-grid">
+                        <div class="issue-card">
+                            <h4><i class="fas fa-exclamation-circle"></i> Application Won't Start</h4>
+                            <p><strong>Solution:</strong> Check system requirements and ensure all dependencies are installed.</p>
+                        </div>
+                        
+                        <div class="issue-card">
+                            <h4><i class="fas fa-exclamation-circle"></i> Slow Processing</h4>
+                            <p><strong>Solution:</strong> Reduce batch size or adjust threading settings in preferences.</p>
+                        </div>
+                        
+                        <div class="issue-card">
+                            <h4><i class="fas fa-exclamation-circle"></i> Face Detection Not Working</h4>
+                            <p><strong>Solution:</strong> Ensure faces are clearly visible and well-lit in the images.</p>
+                        </div>
+                        
+                        <div class="issue-card">
+                            <h4><i class="fas fa-exclamation-circle"></i> Memory Errors</h4>
+                            <p><strong>Solution:</strong> Close other applications and reduce batch size.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section id="faq" class="doc-section">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h4>What image formats are supported?</h4>
+                            <p>CropStudio supports JPEG, PNG, TIFF, BMP, and WebP formats for both input and output.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Can I process images in different aspect ratios simultaneously?</h4>
+                            <p>Yes! You can create multiple output configurations and process the same images to different ratios in one batch.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Is there a limit on batch size?</h4>
+                            <p>There's no hard limit, but performance depends on your system's memory and processing power.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Can I save my settings for future use?</h4>
+                            <p>Yes! CropStudio allows you to save and load custom presets for different workflows.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Does the demo version have limitations?</h4>
+                            <p>The demo version is limited to single image processing and basic features for 1 week.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/logo.svg" alt="CropStudio" class="logo">
+                        <span class="logo-text">CropStudio</span>
+                    </div>
+                    <p>Professional image processing software for photographers, designers, and content creators.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="#troubleshooting">Help</a></li>
+                        <li><a href="../index.html#download">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CropStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="docs.js"></script>
+</body>
+</html>
