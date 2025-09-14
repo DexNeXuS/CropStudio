@@ -1,6 +1,6 @@
-# DexNeXuS Resizer Website
+# CropStudio Website
 
-A professional, responsive website showcasing the DexNeXuS Resizer image processing application. Built with modern HTML5, CSS3, and JavaScript, featuring a premium dark theme that matches the application's design aesthetic.
+A professional, responsive website showcasing the CropStudio image processing application. Built with modern HTML5, CSS3, and JavaScript, featuring a premium dark theme that matches the application's design aesthetic.
 
 ## Features
 
@@ -29,7 +29,7 @@ _WEBSITE/
 
 1. **Create a GitHub Repository**:
    - Go to GitHub and create a new repository
-   - Name it something like `dexnexus-website` or `dexnexus-resizer-site`
+   - Name it something like `cropstudio-website` or `cropstudio-site`
 
 2. **Upload Files**:
    - Upload all files from the `_WEBSITE` folder to your repository
@@ -114,7 +114,7 @@ The website is already optimized for performance:
 
 ## License
 
-This website template is created for the DexNeXuS Resizer application. Feel free to modify and use for your own projects.
+This website template is created for the CropStudio application. Feel free to modify and use for your own projects.
 
 ## Support
 

@@ -73,38 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Form handling
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const subject = this.querySelectorAll('input[type="text"]')[1].value;
-            const message = this.querySelector('textarea').value;
-            
-            // Simple validation
-            if (!name || !email || !subject || !message) {
-                showNotification('Please fill in all fields', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-            this.reset();
-        });
-    }
-});
+// Form handling - Removed old contact form handler (replaced with AWS integration)
 
 // Email validation
 function isValidEmail(email) {
@@ -254,19 +223,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     downloadButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             // Get platform from parent element
             const platform = this.closest('.download-option').querySelector('h4').textContent;
             
-            // Simulate download (replace with actual download logic)
+            // Show download started notification
             showNotification(`Starting download for ${platform}...`, 'info');
             
-            // You can add actual download logic here
-            // For now, just show a success message after a delay
-            setTimeout(() => {
-                showNotification(`Download completed for ${platform}!`, 'success');
-            }, 2000);
+            // Let the default download action proceed
+            // The href will handle the actual download
         });
     });
 });
@@ -487,5 +451,84 @@ setInterval(() => {
 document.addEventListener('DOMContentLoaded', function() {
     if (heroSlides.length > 0) {
         showHeroSlide(0);
+    }
+});
+
+// Contact Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const submitSpinner = document.getElementById('submitSpinner');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page navigation
+            
+            // Get form data
+            const name = document.getElementById('contactName').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            // Validate form
+            if (!name || !subject || !message) {
+                showFormMessage('Please fill in all fields.', 'error');
+                return;
+            }
+            
+            // Create email content with a clean, professional format that works reliably
+            const emailSubject = `CropStudio Website Contact: ${subject}`;
+            const emailBody = `CROPSTUDIO CONTACT
+════════════════════════════════════════════════════════════════
+
+Hi DexNeXuS Designs,
+
+You have received a new contact form submission from the CropStudio website.
+
+────────────────────────────────────────────────────────────────
+MESSAGE:
+
+${message}
+
+Best regards,
+${name}
+
+────────────────────────────────────────────────────────────────
+SENDER DETAILS:
+────────────────────────────────────────────────────────────────
+
+Name: ${name}
+Subject: ${subject}
+Date: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
+
+═══════════════════════════════════════════════════════════════
+This message was sent from the CropStudio website contact form.
+Reply directly to this email to respond to ${name}.
+═══════════════════════════════════════════════════════════════`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:DexNeXuSDesigns@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            showFormMessage('Your email client should open with a pre-filled message. If it doesn\'t, please email us directly at DexNeXuSDesigns@gmail.com', 'success');
+            
+            // Reset form
+            contactForm.reset();
+        });
+    }
+    
+    function showFormMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = 'block';
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
     }
 });
